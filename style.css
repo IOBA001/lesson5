@@ -1,0 +1,99 @@
+body {
+  margin:0;
+  background-color: blueviolet;
+  background: -webkit-linear-gradient(to right, #2e343f, #1e3c72); 
+  background: linear-gradient(to right, #2a5298, #000000); 
+}
+#menuy {
+  cursor: pointer;
+  height: 27px;
+  width: 27px;
+  margin: 50px;
+  overflow: visible;
+  position: relative;
+  z-index:2;
+}
+#menuy span,
+#menuy span:before,
+#menuy span:after {
+  background: #fff;
+  display: block;
+  height: 4px;
+  opacity: 1;
+  position: absolute;
+  transition: 0.3s ease-in-out;
+}
+#menuy span:before,
+#menuy span:after {
+  content: "";
+}
+#menuy span {
+  right: 0px;
+  top: 13px;
+  width: 27px;
+}
+#menuy span:before {
+  left: 0px;
+  top: -10px;
+  width: 16px;
+}
+#menuy span:after {
+  left: 0px;
+  top: 10px;
+  width: 20px;
+}
+
+#menuy.close span {
+  transform: rotate(-45deg);
+  top: 13px;
+  width: 27px;
+}
+#menuy.close span:before {
+  top: 0px;
+  transform: rotate(90deg);
+  width: 27px;
+}
+#menuy.close span:after {
+  top: 0px;
+  left:0;
+  transform: rotate(90deg);
+  opacity:0;
+  width:0;
+}
+
+#box{
+  z-index:1;
+  min-width:100%;
+  min-height:100%;
+  position: fixed;
+  top:0;
+  height:0;
+  visibility: hidden;
+  opacity: 0;
+  text-align:center;
+  padding-top:20px;
+  transition: all 0.3s ease-in-out;
+  
+}
+
+#box.overlay{
+  visibility: visible;
+  opacity: 1;
+  padding-top:100px;
+  background:rgba(0,0,0,0.5);
+}
+
+#box li{
+  list-style:none;
+}
+#box a{
+  color:#fff;
+  display:block;
+  font-size: 32px;
+  margin-bottom:30px;
+  text-decoration:none;
+}
+
+#box a:hover{
+    color: brown;
+}
